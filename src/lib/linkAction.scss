@@ -1,0 +1,40 @@
+@use './var.scss';
+@use './space.scss';
+
+@mixin linkAction {
+    color: var.color(primary);
+    position: relative;
+
+    padding-right: calc(space.space(2) + 7px);
+
+    &:after {
+        display: block;
+        content: '';
+        width: 7;
+        height: 14;
+        background-image: url(/svg/arrowAction.svg);
+        position: absolute;
+        right: 0;
+        top: calc(50% - 8px);
+       background-repeat: no-repeat;
+    }
+}
+
+@mixin linkAction-small {
+    color: var.color(primary);
+    position: relative;
+
+    padding-right: calc(space.space(2) + 7px);
+
+    &:after {
+        display: block;
+        content: '';
+        width: 8;
+        height: 14;
+        background-image: url(/svg/arrowAction.svg);
+        position: absolute;
+        right: 0;
+        top: calc(50% - 7px);
+       background-repeat: no-repeat;
+    }
+}
